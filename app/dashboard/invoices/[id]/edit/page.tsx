@@ -3,6 +3,14 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 
+import { Metadata } from 'next';
+ 
+// Custom specific page mete data
+export const metadata: Metadata = {
+  // title: 'Invoices | Acme Dashboard',
+  title: 'Edit Invoices',
+};
+
  
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
@@ -15,7 +23,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   if (!invoice) {
     notFound();
   }
-  
+
   return (
     <main>
       <Breadcrumbs

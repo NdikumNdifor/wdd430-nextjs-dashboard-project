@@ -1,4 +1,12 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+
+import { Metadata } from 'next';
+ 
+// Custom specific page mete data
+export const metadata: Metadata = {
+  // title: 'Invoices | Acme Dashboard',
+  title: 'Dashboard',
+};
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
