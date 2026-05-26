@@ -1,6 +1,14 @@
 import Form from '@/app/ui/invoices/create-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
+
+import { Metadata } from 'next';
+ 
+// Custom specific page mete data
+export const metadata: Metadata = {
+  // title: 'Invoices | Acme Dashboard',
+  title: 'Create Invoice',
+};
  
 export default async function Page() {
   const customers = await fetchCustomers();
